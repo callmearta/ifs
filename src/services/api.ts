@@ -3,7 +3,9 @@ import { Buffer } from 'buffer';
 
 const openai = new OpenAI({
   apiKey: import.meta.env.VITE_OPENAI_API_KEY,
-  dangerouslyAllowBrowser: true
+  dangerouslyAllowBrowser: true,
+  organization: import.meta.env.VITE_OPENAI_ORG_KEY,
+  project: import.meta.env.VITE_OPENAI_PROJECT_KEY,
 });
 
 export const transcribeAudio = async (audioBlob: Blob): Promise<string> => {
