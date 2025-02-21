@@ -45,7 +45,7 @@ export default function VoiceChat() {
             audioRef.current.currentTime = 0;
             setTimeout(() => {
               audioRef.current?.play();
-            }, 10);
+            }, 1000);
           }
         };
       }

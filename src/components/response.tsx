@@ -13,7 +13,7 @@ export default function Response({ response }: { response: string }) {
     }, [response]);
 
     return (
-        <p className='font-medium text-lg text-left px-12 w-full min-h-48'>{responseText.split(' ').map((word, index) => <span key={index} className="response-word" style={{ '--delay': `${(index+1) * 0.015}s` } as React.CSSProperties}>{word}&nbsp;</span>)}</p>
+        <p className='font-medium text-lg text-left px-12 w-full max-w-[700px] min-h-48'>{responseText.split(' ').map((word, index) => <span key={index} className="response-word" style={{ '--delay': `${(index+1) * 0.015}s` } as React.CSSProperties}>{word}&nbsp;</span>)}</p>
     );
 }
 
