@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+.processing-animate span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.processing-animate span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.processing-animate span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.processing-animate span {
+  animation: processing-animate 1s infinite;
+}
+
+@keyframes processing-animate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.response-word {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn .5s forwards;
+  animation-delay: var(--delay);
+  transform: translateY(4px);
+  transform-origin:center center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
